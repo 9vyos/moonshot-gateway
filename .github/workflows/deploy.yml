@@ -1,4 +1,4 @@
-name: Deploy NestJS User Service App
+name: Deploy NestJS Gateway Service App
 
 on:
   push:
@@ -27,5 +27,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/moonshot-user-service:latest
-            ${{ secrets.DOCKER_USERNAME }}/moonshot-user-service:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/moonshot-gateway-service:latest
+            ${{ secrets.DOCKER_USERNAME }}/moonshot-gateway-service:${{ github.sha }}
