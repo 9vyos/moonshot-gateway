@@ -36,7 +36,6 @@ import { handleAuth } from './config/auth/handle.auth';
           return new RemoteGraphQLDataSource({
             url,
             willSendRequest({ request, context }) {
-              console.log(context.userId);
               request.http.headers.set('user', context.userId);
             },
           });
@@ -45,7 +44,7 @@ import { handleAuth } from './config/auth/handle.auth';
           subgraphs: [
             {
               name: 'User',
-              url: 'https://moonshot-user-service.fly.dev/graphql',
+              url: 'http://moonshot-api.hannah-log.site:3002/graphql',
             },
             {
               name: 'Product',
