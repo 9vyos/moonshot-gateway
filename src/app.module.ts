@@ -32,10 +32,10 @@ import { IntrospectAndCompose } from '@apollo/gateway';
               name: 'User',
               url: 'https://moonshot-user-service.fly.dev/graphql',
             },
-            {
-              name: 'Product',
-              url: 'http://moonshot-api.hannah-log.site:3001/graphql',
-            },
+            // {
+            //   name: 'Product',
+            //   url: 'http://moonshot-api.hannah-log.site:3001/graphql',
+            // },
           ],
         }),
       },
